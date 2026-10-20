@@ -1,4 +1,7 @@
 <title>LacyDaily1</title>
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
   :root {
     --ink: #1a1a2e;
@@ -74,6 +77,13 @@
   nav a:hover {
     text-decoration: underline;
   }
+  h2 {
+    font-size: 16px;
+    margin: 28px 0 8px;
+    color: var(--accent);
+  }
+  ol, ul { margin: 0 0 12px; padding-left: 20px; }
+  li { font-size: 15px; line-height: 1.65; color: var(--ink); margin-bottom: 4px; }
 </style>
 
 <main>
@@ -82,7 +92,21 @@
 
   <p>LacyDaily1 is a personal, single-operator automation tool that identifies highlight moments in a publicly broadcast Twitch stream and, with the operator's explicit review and approval, publishes short vertical clips to the operator's own YouTube and TikTok accounts.</p>
 
-  <p>This page hosts LacyDaily1's domain verification, Privacy Policy, and Terms of Service for its YouTube and TikTok API integrations.</p>
+  <h2>How it works</h2>
+  <p>LacyDaily1 runs a pipeline over each public stream VOD, entirely on the operator's own device:</p>
+  <ol>
+    <li><strong>Ingest</strong> &mdash; downloads the public stream recording and its public chat log.</li>
+    <li><strong>Detect</strong> &mdash; scores moments in the stream using chat activity, audio energy, and an automated content-quality rating, to surface candidate highlights.</li>
+    <li><strong>Render</strong> &mdash; reframes each candidate into a vertical video with burned-in captions and a subscribe callout.</li>
+    <li><strong>Review</strong> &mdash; the operator personally watches every candidate clip, confirms the person shown is correctly identified, and checks for any content that shouldn't be posted.</li>
+    <li><strong>Publish</strong> &mdash; only clips the operator has explicitly approved are uploaded to the operator's own YouTube and TikTok accounts. Nothing is posted automatically without that review step.</li>
+  </ol>
+
+  <h2>Who operates it</h2>
+  <p>LacyDaily1 is operated by a single individual as a fan project. It is not affiliated with, endorsed by, or operated on behalf of the streamer it clips, or by Twitch, YouTube, or TikTok.</p>
+
+  <h2>Legal &amp; verification</h2>
+  <p>This page also hosts LacyDaily1's domain verification, Privacy Policy, and Terms of Service for its YouTube and TikTok API integrations.</p>
 
   <nav>
     <a href="/privacy/">Privacy Policy</a>
